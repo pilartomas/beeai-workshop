@@ -1,8 +1,8 @@
-# Granite Foundation Models AI Workshop
+# BeeAI Workshop
 
-This is the Granite foundation models AI workshop hosted on GitHub Pages using Material for MkDocs. To view it online, go to:
+This is the BeeAI workshop hosted on GitHub Pages using Material for MkDocs. To view it online, go to:
 
-<https://ibm.github.io/granite-workshop/>
+<edengilbert.github.io/beeai-workshop/>
 
 ## License & Authors
 
