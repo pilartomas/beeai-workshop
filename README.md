@@ -2,7 +2,7 @@
 
 This is the BeeAI workshop hosted on GitHub Pages using Material for MkDocs. To view it online, go to:
 
-<edengilbert.github.io/beeai-workshop/>
+<https://edengilbert.github.io/beeai-workshop/>
 
 ## License & Authors
 
