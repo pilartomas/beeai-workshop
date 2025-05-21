@@ -1,11 +1,11 @@
 # Project information
-site_name: Granite Workshop
-site_url: https://ibm.github.io/granite-workshop
+site_name: BeeAI Workshop
+site_url: https://ibm.github.io/beeai-workshop
 site_author: IBM Research
 
 # Repository
-repo_name: granite-workshop
-repo_url: https://github.com/IBM/granite-workshop
+repo_name: beeai-workshop
+repo_url: https://github.com/IBM/beeai-workshop
 edit_uri: edit/main/docs
 
 # Navigation
@@ -19,13 +19,13 @@ nav:
     - Lab 3. Energy Demand Forecasting with Granite Timeseries (TTM): lab-3/README.md
     - Lab 4. Generating Bash Code with Granite Code: lab-4/README.md
   - References:
-    - IBM Granite Community: https://github.com/ibm-granite-community
+    - BeeAI Community: https://github.com/i-am-bee
 
 
 ## DO NOT CHANGE BELOW THIS LINE
 
 # Copyright
-copyright: Copyright &copy; 2024- IBM Research
+copyright: Copyright &copy; 2025- BeeAI a Series of LF Projects, LLC
 
 # Theme
 theme:
@@ -67,7 +67,7 @@ extra:
       link: https://www.youtube.com/user/developerworks
     - icon: fontawesome/brands/dev
       link: https://dev.to/ibmdeveloper
-  colab_url: https://colab.research.google.com/github/IBM/granite-workshop
+  colab_url: https://colab.research.google.com/github/IBM/beeai-workshop
 
 # Extensions
 markdown_extensions:

@@ -22,7 +22,6 @@ The introductory page of the workshop is broken down into the following sections
 
 * [Agenda](#agenda)
 * [Technology Used](#technology-used)
-* [Credits](#credits)
 
 ## Agenda
 
@@ -44,10 +43,3 @@ The technology used in the workshop is as follows:
 * [LangChain](https://www.langchain.com/)
 * [Ollama](https://ollama.com)
 * [Replicate](https://replicate.com/)
-
-## Credits
-
-* [BJ Hargrave](https://github.com/bjhargrave)
-* [Martin Hickey](https://github.com/hickeyma)
-* [Ming Zhao](https://github.com/mingxzhao)
-* The notebooks used in this workshop are versions of notebooks from the [IBM Granite Community](https://github.com/ibm-granite-community) modified for the workshop needs
