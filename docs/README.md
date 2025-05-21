@@ -6,7 +6,7 @@ logo: images/ibm-blue-background.png
 
 # Introduction
 
-Welcome to our workshop! In this workshop we'll be using the open-sourced [BeeAI](beeai.dev) for a number of use cases that
+Welcome to our workshop! In this workshop we'll be using the open-sourced [BeeAI](https://beeai.dev) for a number of use cases that
 demonstrates the value of [generative AI](https://developer.ibm.com/generative-ai-for-developers).
 
 By the end of this workshop, you will be able to:
