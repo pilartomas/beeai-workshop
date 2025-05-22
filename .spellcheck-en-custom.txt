@@ -1,4 +1,6 @@
 Augumented
+acp
+ACP
 BJ
 cd
 CLI
@@ -36,6 +38,7 @@ pretrained
 repo
 runtime
 scalability
+SDK
 summarization
 Summarization
 TBD
@@ -49,5 +52,6 @@ TSFM
 TTM
 TTMs
 url
+uv
 venv
 Zhao

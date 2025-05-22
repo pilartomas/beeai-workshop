@@ -1,30 +1,50 @@
 ---
-title: Granite Workshop Pre-work
-description: Preparation for the Granite Workshop
+title: BeeAI Workshop Pre-work
+description: Preparation for the BeeAI Workshop
 logo: images/ibm-blue-background.png
 ---
 
 # Pre-work
 
-The labs in the workshop are [Jupyter notebooks](https://jupyter.org/). The notebooks can be run on your computer or remotely on the [Google Colab](https://colab.research.google.com) service. Check out [Running the Granite Notebooks](#running-the-granite-notebooks) section on how to setup the way you want to run the notebooks.
+## ACP
 
-## Running the Granite Notebooks
+### Prerequisites to get started with ACP
 
-The notebooks can be run:
+- Python '>=3.11
+  - Go to [python.org/downloads](https://www.python.org/downloads/)
+  - Download the version for your operating system (Windows, macOS, or Linux)
+    > Important: During installation, make sure to check the box that says `Add Python to PATH` or manually if you skip this step
+  - To verify installation type `python --version`
+- [Visual Studio Code](https://ibm.github.io/opensource-ai-workshop/pre-work/#installing-visual-studio-code) (Recommended)
+  - You can use any IDE, but this workshop assumes you're using VS Code
+  - If this is your first time using VS Code, make sure to install the Python extension from the extension marketplace
+- uv
+  - uv is recommended for this workshop, but you can use uv, pip, or another package manager if you're more comfortable with them.
+  - If you’re unfamiliar with uv, check out [this uv primer](https://agentcommunicationprotocol.dev/introduction/uv-primer) for installation instructions
 
-- [Locally on your computer](#running-the-granite-notebooks-locally) OR
-- [Remotely on the Google Colab service](#running-the-granite-notebooks-remotely-colab)
+### ACP Setup Prior to Starting the Workshop Code
 
-Follow the instructions in one of the sections that follow on how you would like to run the notebooks.
+1. Open VS Code and navigate to the directory where you want to create your new ACP project
 
-## Running the Granite Notebooks Locally
+1. Initialize a new project by running the following command in the terminal. This creates a new project folder named my_acp_project and sets it up with uv.
 
-It is recommended if you want to run the lab notebooks locally on your computer that you have:
+   ```shell
+   uv init --python '>=3.11' my_acp_project 
+   ```
 
-- A computer or laptop
-- Knowledge of [Git](https://git-scm.com/) and [Python](https://www.python.org/)
+1. Navigate into your new project directory
 
-If not, then it recommended to go to the [Running the Granite Notebooks Remotely (Colab)](#running-the-granite-notebooks-remotely-colab) section instead.
+   ```shell
+   cd my_acp_project
+   ```
+
+1. Add the ACP SDK as a dependency
+
+   ```shell
+   uv add acp-sdk
+   ```
+
+---
 
 Running the lab notebooks locally on your computer requires the following steps:
 
