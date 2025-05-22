@@ -44,150 +44,54 @@ logo: images/ibm-blue-background.png
    uv add acp-sdk
    ```
 
----
+## BeeAI Platform
 
-Running the lab notebooks locally on your computer requires the following steps:
+### Prerequisites to get started with BeeAI Platform
 
-- [Local Prerequisites](#local-prerequisites)
-- [Clone the Granite Workshop Repository](#clone-the-granite-workshop-repository)
-- [Serving the Granite AI Models](#serving-the-granite-ai-models)
-- [Install Jupyter](#install-jupyter)
+- [Homebrew](https://brew.sh/) (for macOS or Linux)
+  - If you don’t already have Homebrew installed, run the following command in your terminal and follow the instructions to update your shell environment:
+
+    ```shell
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    ```
+
+- [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install) (for Windows users)
+  - [Windows WSL2 setup instructions](https://docs.beeai.dev/introduction/installation#windows-wsl2-setup-instructions)
+- LLM API Key or Ollama?
+
+### BeeAI Platform setup prior to starting the workshop code
+
+> Note: If using a Windows, open WSL2 by right-clicking the Start menu, selecting a terminal (e.g., PowerShell or Windows Terminal), and typing the `wsl` command. From there, run all the following installation commands inside the WSL shell, not the Windows shell.
+
+1. Install BeeAI using Homebrew:
+
+   ```shell
+   brew install i-am-bee/beeai/beeai
+   ```
+
+1. Start the BeeAI background service:
+
+   ```shell
+   brew services start beeai
+   ```
+
+### Already have BeeAI installed? Update and restart it
+
+   ```shell
+   brew upgrade beeai
+   brew services restart beeai
+   ```
 
 ### Local Prerequisites
 
 - Git
-- Python 3.10, 3.11, or 3.12
+- Python 3.11 or 3.12
 
-### Clone the Granite Workshop Repository
+### Clone the BeeAI workshop repository
 
 Clone the workshop repo and cd into the repo directory.
 
 ```shell
-git clone https://github.com/IBM/granite-workshop.git
-cd granite-workshop
+git clone https://github.com/IBM/beeai-workshop.git
+cd beeai-workshop
 ```
-
-### Serving the Granite AI Models
-
-[Lab 1: Document Summarization with Granite](../lab-1/README.md), [Lab 2: Retrieval Augmented Generation (RAG) with Langchain](../lab-2/README.md) and [Lab 4: Generating Bash Code with Granite Code](../lab-4/README.md) require Granite models to be served by an AI model runtime so that the models can be invoked or called. There are 2 options to serve the models as follows:
-
-- [Replicate AI Cloud Platform](#replicate-ai-cloud-platform) OR
-- [Running Ollama Locally](#running-ollama-locally)
-
-#### Replicate AI Cloud Platform
-
-[Replicate](https://replicate.com/) is a cloud platform that will host and serve AI models for you.
-
-1. Create a [Replicate](https://replicate.com/) account. You will need a [GitHub](https://github.com/) account to do this.
-
-1. Add credit to your Replicate Account (optional). To remove a barrier to entry to try the Granite models on the Replicate platform, use [this link](https://replicate.com/invites/a8717bfe-2f3d-4a52-88ed-1356231cdf03) to add a small amount of credit to your Replicate account.
-
-1. Create a Replicate [API Token](https://replicate.com/account/api-tokens).
-
-1. Set your Replicate API Token as an environment variable in your terminal where you will run the notebook:
-
-    ```shell
-    export REPLICATE_API_TOKEN=<your_replicate_api_token>
-    ```
-
-#### Running Ollama Locally
-
-If you want to run the AI models locally on your computer, you can use [Ollama](https://ollama.com/). You will need to have a computer with:
-
-- GPU processor
-- At least 32GB RAM
-
-!!! note "Tested system"
-    This was tested on a Macbook with an M1 processor and 32GB RAM. It maybe possible to serve models with a CPU and less memory.
-
-If you computer is unable to serve the models, then it is recommended to go to the [Replicate AI Cloud Platform](#replicate-ai-cloud-platform) section instead.
-
-Running Ollama locally on your computer requires the following steps:
-
-1. [Download and install Ollama](https://github.com/ollama/ollama?tab=readme-ov-file#ollama), if you haven't already. **Ollama v0.3.14+ is required, so please upgrade if on an earlier version.**
-
-    On macOS, you can use Homebrew to install with
-
-    ```shell
-    brew install ollama
-    ```
-
-1. Start the Ollama server. You will leave this running during the workshop.
-
-    ```shell
-    ollama serve
-    ```
-
-1. In another terminal window, pull down the Granite models you will want to use in the workshop. Larger models take more memory to run but can give better results.
-
-    ```shell
-    ollama pull granite3.3:2b
-    ollama pull granite3.3:8b
-    ```
-
-    For [Lab 4: Generating Bash Code with Granite Code](../lab-4/README.md), you will also need at least one of the following Granite Code models.
-
-    ```shell
-    ollama pull granite-code:3b
-    ollama pull granite-code:8b
-    ```
-
-### Install Jupyter
-
-!!! note "Use a virtual environment"
-    Before installing dependencies and to avoid conflicts in your environment, it is advisable to use a [virtual environment (venv)](https://docs.python.org/3/library/venv.html).
-
-1. Create virtual environment:
-
-    ```shell
-    python3 -m venv --upgrade-deps --clear venv
-    ```
-
-1. Activate the virtual environment by running:
-
-    ```shell
-    source venv/bin/activate
-    ```
-
-1. Install Jupyter notebook in the virtual environment:
-
-    ```shell
-    python3 -m pip install --require-virtualenv notebook ipywidgets
-    ```
-
-    For more information, see the [Jupyter installation instructions](https://jupyter.org/install)
-
-1. To open a notebook in Jupyter (in the active virtual environment), run:
-
-    ```shell
-    jupyter notebook <notebook-file-path>
-    ```
-
-## Running the Granite Notebooks Remotely (Colab)
-
-Running the lab notebooks remotely using [Google Colab](https://colab.research.google.com) requires the following steps:
-
-- [Colab Prerequisites](#colab-prerequisites)
-- [Serving the Granite AI Models for Colab](#serving-the-granite-ai-models-for-colab)
-
-!!! note "Notebook execution speed tip" The default execution runtime in Colab uses a CPU. Consider using a different Colab runtime to increase execution speed, especially in situations where you may have other constraints such as a slow network connection. From the navigation bar, select `Runtime->Change runtime type`, then select either GPU- or TPU-based hardware acceleration.
-
-### Colab Prerequisites
-
-- [Google Colab](https://colab.research.google.com) requires a Google account that you're logged into
-
-### Serving the Granite AI Models for Colab
-
-[Lab 1: Document Summarization with Granite](../lab-1/README.md), [Lab 2: Retrieval Augmented Generation (RAG) with Langchain](../lab-2/README.md) and [Lab 4: Generating Bash Code with Granite Code](../lab-4/README.md) require Granite models to be served by an AI model runtime so that the models can be invoked or called.
-
-#### Replicate AI Cloud Platform for Colab
-
-[Replicate](https://replicate.com/) is a cloud platform that will host and serve AI models for you.
-
-1. Create a [Replicate](https://replicate.com/) account. You will need a [GitHub](https://github.com/) account to do this.
-
-1. Add credit to your Replicate Account (optional). To remove a barrier to entry to try the Granite Code models on the Replicate platform, use [this link](https://replicate.com/invites/a8717bfe-2f3d-4a52-88ed-1356231cdf03) to add a small amount of credit to your Replicate account.
-
-1. Create a Replicate [API Token](https://replicate.com/account/api-tokens).
-
-1. Add your Replicate API Token to the Colab Secrets manager to securely store it. Open [Google Colab](https://colab.research.google.com) and click on the 🔑 Secrets tab in the left panel. Click "New Secret" and enter `REPLICATE_API_TOKEN` as the key, and paste your token into the value field. Toggle the button on the left to allow notebook access to the secret.
