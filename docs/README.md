@@ -9,37 +9,58 @@ logo: images/ibm-blue-background.png
 Welcome to our workshop! In this workshop we'll be using the open-sourced [BeeAI](https://beeai.dev) for a number of use cases that
 demonstrates the value of [generative AI](https://developer.ibm.com/generative-ai-for-developers).
 
-By the end of this workshop, you will be able to:
+In this workshop you will:
 
-* Summarize a text document using [text summarization](https://www.ibm.com/topics/text-summarization)
-* Generate specific information from a large document using the [RAG](https://research.ibm.com/blog/retrieval-augmented-generation-RAG) technique
-* Predict future trends using [time series forecasting](https://research.ibm.com/blog/AI-time-series-forecasting)
-* Generate programming code ([Bash](https://opensource.com/resources/what-bash)) by [prompting](https://en.wikipedia.org/wiki/Prompt_engineering) a code model
+Lab 1:
 
-### About this workshop
+* Create an ACP agent using the BeeAI Framework and ACP SDK
+* Create an ACP agent using the PydanticAI framework and ACP SDK
+* Invoke your ACP agents using a curl command or the OpenAPI UI
 
-The introductory page of the workshop is broken down into the following sections:
+Lab 2:
 
-* [Agenda](#agenda)
-* [Technology Used](#technology-used)
+* Run the BeeAI Platform and see your agents auto-register
+* Invoke your agents using the BeeAI Platform UI
+
+Lab 3:
+
+* Create a new agent to orchestrate the 2 existing agents
+* for the 2 existing agents change the ports? (done earlier)
+* add client function that calls the agents from different servers.
+Open questions 1 file or 3 separate ones
+* Add from repo?
+
+How to Register an ACP agent to the BeeAI Platform (so you can test, run, and share your agent)
+
+How to use your agent on the BeeAI platform
+
+Scenario:
+
+You will build a customer service triage process where a ticket comes in and
+an ACP agent categorizes the ticket and extracts key insights from it.
+Then it will hand it off to another ACP Agent that crafts a tone-specific response
+to the customer.
 
 ## Agenda
 
-|  |  |
-| :--- | :--- |
-| [Lab 0: Pre-work](pre-work/README.md)  | Pre-work for the workshop |
-| [Lab 1: Document Summarization with Granite](lab-1/README.md) | Learn how to use an AI model to summarize a work of literature |
-| [Lab 2: Retrieval Augmented Generation (RAG) with Langchain](lab-2/README.md)| Learn how to generate specific information from a large document |
-| [Lab 3: Energy Demand Forecasting with Granite Timeseries (TTM)](lab-3/README.md) | Learn how to predict future trends using time series forecasting |
-| [Lab 4: Generating Bash Code with Granite Code](lab-4/README.md) | Learn how to use an AI model to generate programming code |
+|                                                  |                                                      |
+|:-------------------------------------------------|:-----------------------------------------------------|
+| [Lab 0: Pre-work](pre-work/README.md)            | Pre-work for the workshop                            |
+| [Lab 1: Create agents with ACP](lab-1/README.md) | Create and invoke ACP agents                         |
+| [Lab 2: Use the BeeAI Platform](lab-2/README.md) | Run the BeeAI Platform and use your agents in the UI |
+| [Lab 3:](lab-3/README.md)                        | Learn how to...                                      |
+| [Lab 4:](lab-4/README.md)                        | Learn how to...                                      |
 
 ## Technology Used
 
 The technology used in the workshop is as follows:
 
-* [Google Colab](https://colab.research.google.com)
-* [IBM Granite AI foundation models](https://www.ibm.com/granite)
-* [Jupyter notebooks](https://jupyter.org/)
-* [LangChain](https://www.langchain.com/)
-* [Ollama](https://ollama.com)
-* [Replicate](https://replicate.com/)
+* TODO: links
+* ACP
+* BeeAI Framework
+* BeeAI Platform
+* uv
+* FastAPI / OpenAPI
+* MCP?
+* Models used?
+* Providers used?
