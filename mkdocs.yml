@@ -14,10 +14,10 @@ nav:
     - About the workshop: README.md
   - Workshop:
     - Lab 0. Pre-work: pre-work/README.md
-    - Lab 1. Summarize a text document with Granite: lab-1/README.md
-    - Lab 2. Retrieval Augmented Generation (RAG) with Langchain: lab-2/README.md
-    - Lab 3. Energy Demand Forecasting with Granite Timeseries (TTM): lab-3/README.md
-    - Lab 4. Generating Bash Code with Granite Code: lab-4/README.md
+    - Lab 1. Create agents with ACP: lab-1/README.md
+    - Lab 2. Use the BeeAI Platform: lab-2/README.md
+    - Lab 3. more: lab-3/README.md
+    - Lab 4. more: lab-4/README.md
   - References:
     - BeeAI Community: https://github.com/i-am-bee
 
