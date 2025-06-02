@@ -1,6 +1,7 @@
 Augumented
 acp
 ACP
+beeai
 BJ
 cd
 CLI
@@ -14,6 +15,7 @@ dataset
 datetime
 embeddings
 Embeddings
+env
 Hargrave
 Homebrew
 Huggingface
@@ -26,8 +28,10 @@ jupyter
 Jupyter
 Kaggle
 Langchain
+localhost
 LLM
 Macbook
+MCP
 Milvus
 ollama
 Ollama
@@ -35,6 +39,7 @@ png
 pre
 Pre
 pretrained
+PydanticAI
 repo
 runtime
 scalability
@@ -46,11 +51,14 @@ tbody
 th
 thead
 Timeseries
+TODO
+todo
 TPU
 tsfm
 TSFM
 TTM
 TTMs
+UI
 url
 uv
 WSL
