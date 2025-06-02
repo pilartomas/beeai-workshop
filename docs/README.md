@@ -39,17 +39,17 @@ Scenario:
 You will build a customer service triage process where a ticket comes in and
 an ACP agent categorizes the ticket and extracts key insights from it.
 Then it will hand it off to another ACP Agent that crafts a tone-specific response
-to the customer. 
+to the customer.
 
 ## Agenda
 
-|                                                                                   |                                                                  |
-|:----------------------------------------------------------------------------------|:-----------------------------------------------------------------|
-| [Lab 0: Pre-work](pre-work/README.md)                                             | Pre-work for the workshop                                        |
-| [Lab 1: Create agents with ACP](lab-1/README.md)                                  | Create and invoke ACP agents                                     |
-| [Lab 2: Use the BeeAI Platform](lab-2/README.md)                                  | Run the BeeAI Platform and use your agents in the UI             |
-| [Lab 3:                                                        ](lab-3/README.md) | Learn how to...                                                  |
-| [Lab 4:                                       ](lab-4/README.md)                  | Learn how to...                                                  |
+|                                                  |                                                      |
+|:-------------------------------------------------|:-----------------------------------------------------|
+| [Lab 0: Pre-work](pre-work/README.md)            | Pre-work for the workshop                            |
+| [Lab 1: Create agents with ACP](lab-1/README.md) | Create and invoke ACP agents                         |
+| [Lab 2: Use the BeeAI Platform](lab-2/README.md) | Run the BeeAI Platform and use your agents in the UI |
+| [Lab 3:](lab-3/README.md)                        | Learn how to...                                      |
+| [Lab 4:](lab-4/README.md)                        | Learn how to...                                      |
 
 ## Technology Used
 

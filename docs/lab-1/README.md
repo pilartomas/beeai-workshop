@@ -38,7 +38,7 @@ We are using 2 frameworks to illustrate how easy it is to make any agent ACP-com
      ```shell
      cp env.template .env
      ```
-   
+
    * Edit the `.env` file to add your OpenAI API key.  The file should look like below
    (the API key in example is fake and shorter than a real one).
 
@@ -52,7 +52,7 @@ We are using 2 frameworks to illustrate how easy it is to make any agent ACP-com
      OPENAI_API_KEY=sk-proj-foobar-example-yada-yada
      # OPENAI_BASE_URL=leave-this-commented-out
      ```
-   
+
 4. Run the TicketTriageAgent (defaults to run on port 8000)
 
    ```shell
