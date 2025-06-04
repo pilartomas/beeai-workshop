@@ -16,6 +16,7 @@ datetime
 embeddings
 Embeddings
 env
+groq
 Hargrave
 Homebrew
 Huggingface
@@ -35,6 +36,7 @@ MCP
 Milvus
 ollama
 Ollama
+OPENAI
 png
 pre
 Pre

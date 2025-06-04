@@ -72,11 +72,12 @@ We are using 2 frameworks to illustrate how easy it is to make any agent ACP-com
    * Hit the `Try it out` button and then click `Execute`
 
    > --- Expected results ---
-   > 
+   >
    > Under `Responses`:
    > * Under `Response body`, the result shows just one agent named `ticket_triage_agent` (the second agent is not running on port 8000).
    > * Under `Curl`, you get the curl command that you can run in a terminal (instead of using the UI)
    > * Try running the curl command (in a new terminal window)
+   >
    >   ```shell
    >   curl -X 'GET' 'http://localhost:8000/agents' -H 'accept: application/json'
    >   ```
@@ -91,7 +92,7 @@ We are using 2 frameworks to illustrate how easy it is to make any agent ACP-com
      * Find **"agent_name"** and change the value from "string" to **"ticket_triage_agent"**
      * Find **"content"** and change the value from "string" to:
 
-       ```
+       ```text
        "Hi there, this is Jane Doe. Ever since yesterday your ProPlan won't let me export reports. This is blocking my quarter-end close—please fix ASAP or refund the month.AccountNumber: 872-55"
        ```
 
@@ -100,7 +101,7 @@ We are using 2 frameworks to illustrate how easy it is to make any agent ACP-com
    * Click `Execute`
 
    > --- Expected results ---
-   > 
+   >
    > Under `Responses`:
    > * Under `Response body`, the result shows just one agent named `ticket_triage_agent` (the second agent is not running on port 8000).
    > * Under `Curl`, you get the curl command that you can run in a terminal (instead of using the UI)
@@ -124,9 +125,9 @@ We are using 2 frameworks to illustrate how easy it is to make any agent ACP-com
    * (OPTIONAL) Try repeating the FastAPI steps but this time use port 8001 to see the API for the response agent API
 
      > Note: The input format is tricky so maybe just compare the schema with the above curl. We'll make this much easier in the next lab.
-     > 
+     >
      > Hint:
-     > 
+     >
      > ```json
      > "content": "{\"category\":[\"Technical\"],\"customer_name\":\"Jane Doe\",\"account_id\":\"872-55\",\"product\":\"ProPlan\",\"issue_summary\":\"ProPlan product is throwing \\\"Error 500\\\" when exporting reports since yesterday, blocking quarter-end close.\",\"severity\":\"high\",\"sentiment\":\"negative\",\"incident_date\":\"2024-06-11\"}",
      > ```
