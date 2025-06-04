@@ -56,7 +56,8 @@ async def ticket_triage_agent(input: list[Message]) -> AsyncGenerator[RunYield, 
         """ An agent that classifies customer support tickets.
         """
         user_prompt = flatten_messages(input[-1:])
-        llm = OpenAIChatModel("gpt-4.1-mini-2025-04-14")
+        model_name = os.getenv("MODEL_NAME", "gpt-4.1-mini-2025-04-14")
+        llm = OpenAIChatModel(model_name)
         system_msg = SystemMessage(
              """
             You are “Support-Sensei,” an AI assistant that must:
@@ -70,8 +71,9 @@ async def ticket_triage_agent(input: list[Message]) -> AsyncGenerator[RunYield, 
         )
         yield package_response(response.object)
 
+
 def run():
-    server.run(host=os.getenv("HOST", "127.0.0.1"), port=int(os.getenv("PORT", 8000)))
+    server.run(port=int(os.getenv("PORT", 8000)))
 
 
 if __name__ == "__main__":

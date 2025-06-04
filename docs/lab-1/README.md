@@ -43,14 +43,10 @@ We are using 2 frameworks to illustrate how easy it is to make any agent ACP-com
    (the API key in example is fake and shorter than a real one). The OPENAI_BASE_URL shown is for groq.
 
      ```shell
-     ########################
-     ### OpenAI config
-     ########################
-
-     # Uncomment and configure vars as needed
-
-     OPENAI_API_KEY=sk-proj-foo-example-yada-yada
+     # Example for groq:
+     OPENAI_API_KEY=<your-groq-api-key>
      OPENAI_BASE_URL=https://api.groq.com/openai/v1
+     MODEL_NAME=meta-llama/llama-4-scout-17b-16e-instruct
      ```
 
 4. Run the ticket triage agent (defaults to run on port 8000)

@@ -28,7 +28,8 @@ async def ticket_response_agent(input: list[Message]) -> AsyncGenerator[RunYield
     """
     user_prompt = flatten_messages(input)
 
-    model = OpenAIModel('gpt-4.1-mini-2025-04-14', provider=OpenAIProvider(api_key=os.getenv('OPENAI_API_KEY')))
+    model_name = os.getenv("MODEL_NAME", "gpt-4.1-mini-2025-04-14")
+    model = OpenAIModel(model_name)
     TicketResponseAgent = Agent( model=model,
                             system_prompt=("""
                                            You are a helpful customer support agent that creates clear, helpful, human-sounding replies to a customer.
@@ -47,7 +48,7 @@ async def ticket_response_agent(input: list[Message]) -> AsyncGenerator[RunYield
 
 #Run these agents on different ports
 def run():
-    server.run(host=os.getenv("HOST", "127.0.0.1"), port=int(os.getenv("PORT", 8000)))
+    server.run(port=int(os.getenv("PORT", 8000)))
 
 
 if __name__ == "__main__":
