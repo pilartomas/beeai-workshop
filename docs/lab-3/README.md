@@ -1,7 +1,9 @@
 ---
-title: Lab 3
-description: Lab 3 description
+title: Use the BeeAI Platform
+description: Run the BeeAI Platform and use your agents in the UI
 logo: images/ibm-blue-background.png
 ---
 
-# Lab 3 description
+# Use the BeeAI Platform
+
+under construction
