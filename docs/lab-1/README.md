@@ -40,7 +40,7 @@ We are using 2 frameworks to illustrate how easy it is to make any agent ACP-com
      ```
 
    * Edit the `.env` file to add your OpenAI API key.  The file should look like below
-   (the API key in example is fake and shorter than a real one).
+   (the API key in example is fake and shorter than a real one). The OPENAI_BASE_URL shown is for groq.
 
      ```shell
      ########################
@@ -49,48 +49,66 @@ We are using 2 frameworks to illustrate how easy it is to make any agent ACP-com
 
      # Uncomment and configure vars as needed
 
-     OPENAI_API_KEY=sk-proj-foobar-example-yada-yada
-     # OPENAI_BASE_URL=leave-this-commented-out
+     OPENAI_API_KEY=sk-proj-foo-example-yada-yada
+     OPENAI_BASE_URL=https://api.groq.com/openai/v1
      ```
 
-4. Run the TicketTriageAgent (defaults to run on port 8000)
+4. Run the ticket triage agent (defaults to run on port 8000)
 
    ```shell
-   uv run -m TicketTriageAgent.agent
+   uv run src/ticket_triage_agent.py
    ```
 
-5. Run the TicketResponseAgent using PORT 8001 (env var for command)
+5. Run the ticket response agent using port 8001
 
    ```shell
-   PORT=8001 uv run -m TicketResponseAgent.agent
+   PORT=8001 uv run src/ticket_response_agent.py
    ```
 
 6. Use your browser to try the FastAPI interface
 
-   * Browse to localhost:8000/docs
-   * Pull down `GET /agents List Agents`
+   * Browse to [http://localhost:8000/docs](http://localhost:8000/docs)
+   * Pull down `GET` **/agents** *List Agents*
    * Hit the `Try it out` button and then click `Execute`
 
-   You should see just one agent because TicketTriageAgent is the one running on port 8000.
+   > --- Expected results ---
+   > 
+   > Under `Responses`:
+   > * Under `Response body`, the result shows just one agent named `ticket_triage_agent` (the second agent is not running on port 8000).
+   > * Under `Curl`, you get the curl command that you can run in a terminal (instead of using the UI)
+   > * Try running the curl command (in a new terminal window)
+   >   ```shell
+   >   curl -X 'GET' 'http://localhost:8000/agents' -H 'accept: application/json'
+   >   ```
 
 7. Invoke the triage agent
 
    * Go back to the main FastAPI page
    * Pull down `POST /runs Create Run`
+   * Pull down `POST` **/runs** *Create Run*
    * Hit the `Try it out` button
    * In the `Request body`:
-     * Find "agent_name" and change the value from "string" to "ticket_triage_agent"
-     * Find "content" and change the value from "string" to:
-       * "Hi there, this is Jane Doe. Ever since yesterday your ProPlan won't let me export reports. This is blocking my quarter-end close—please fix ASAP or refund the month.AccountNumber: 872-55"
-   * In the `Request body` remove the "content_url" line
+     * Find **"agent_name"** and change the value from "string" to **"ticket_triage_agent"**
+     * Find **"content"** and change the value from "string" to:
+
+       ```
+       "Hi there, this is Jane Doe. Ever since yesterday your ProPlan won't let me export reports. This is blocking my quarter-end close—please fix ASAP or refund the month.AccountNumber: 872-55"
+       ```
+
+     * Remove the **"content_url"** line
+     * Find **"mode"** and change the value from "sync" to **"stream"**
    * Click `Execute`
-   * Look for the result...
-   * Copy the curl command
-   * Try running the curl command (in a new terminal window)
+
+   > --- Expected results ---
+   > 
+   > Under `Responses`:
+   > * Under `Response body`, the result shows just one agent named `ticket_triage_agent` (the second agent is not running on port 8000).
+   > * Under `Curl`, you get the curl command that you can run in a terminal (instead of using the UI)
+   > * Try running the curl command (in a new terminal window)
 
 8. Invoke the response agent
 
-   * Try this curl command:
+   * Try this curl command (notice the port is **8001**)
 
      ```shell
      curl -N -X POST http://localhost:8001/runs \
@@ -99,6 +117,16 @@ We are using 2 frameworks to illustrate how easy it is to make any agent ACP-com
      -d '{"agent_name":"ticket_response_agent","input":[{"parts":[{"content":"{\"category\":[\"Technical\"],\"customer_name\":\"Jane Doe\",\"account_id\":\"872-55\",\"product\":\"ProPlan\",\"issue_summary\":\"ProPlan product is throwing \\\"Error 500\\\" when exporting reports since yesterday, blocking quarter-end close.\",\"severity\":\"high\",\"sentiment\":\"negative\",\"incident_date\":\"2024-06-11\"}","content_encoding":"plain","content_url":null}]}],"mode":"stream"}'
      ```
 
-   * Try repeating the FastAPI steps but this time use port 8001 to see the API for the response agent API
+   > --- Expected results ---
+   >
+   > In the response body, you should see an appropriate human-like ticket agent response
 
-     > Note: The input format is tricky so maybe just compare the schema with the above curl
+   * (OPTIONAL) Try repeating the FastAPI steps but this time use port 8001 to see the API for the response agent API
+
+     > Note: The input format is tricky so maybe just compare the schema with the above curl. We'll make this much easier in the next lab.
+     > 
+     > Hint:
+     > 
+     > ```json
+     > "content": "{\"category\":[\"Technical\"],\"customer_name\":\"Jane Doe\",\"account_id\":\"872-55\",\"product\":\"ProPlan\",\"issue_summary\":\"ProPlan product is throwing \\\"Error 500\\\" when exporting reports since yesterday, blocking quarter-end close.\",\"severity\":\"high\",\"sentiment\":\"negative\",\"incident_date\":\"2024-06-11\"}",
+     > ```
