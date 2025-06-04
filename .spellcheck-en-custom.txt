@@ -5,6 +5,7 @@ beeai
 BJ
 cd
 CLI
+CTRL
 colab
 Colab
 config
