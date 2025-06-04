@@ -13,11 +13,12 @@ nav:
   - Welcome:
     - About the workshop: README.md
   - Workshop:
-    - Lab 0. Pre-work: pre-work/README.md
-    - Lab 1. Create agents with ACP: lab-1/README.md
-    - Lab 2. A multi-agent workflow: lab-2/README.md
-    - Lab 3. Use the BeeAI Platform: lab-3/README.md
-    - Uninstall: lab-4/README.md
+    - Simple Workshop:
+      - Lab 0. Pre-work: pre-work/README.md
+      - Lab 1. Create agents with ACP: lab-1/README.md
+      - Lab 2. A multi-agent workflow: lab-2/README.md
+      - Lab 3. Use the BeeAI Platform: lab-3/README.md
+      - Uninstall: lab-4/README.md
   - References:
     - BeeAI Community: https://github.com/i-am-bee
 
