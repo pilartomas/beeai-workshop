@@ -11,9 +11,9 @@ edit_uri: edit/main/docs
 # Navigation
 nav:
   - Welcome:
-    - About the workshop: README.md
-  - Workshop:
-    - Simple Workshop:
+    - About BeeAI: README.md
+  - Workshops:
+    - Introduction to ACP and BeeAI Workshop:
       - Lab 0. Pre-work: pre-work/README.md
       - Lab 1. Create agents with ACP: lab-1/README.md
       - Lab 2. A multi-agent workflow: lab-2/README.md
@@ -36,7 +36,7 @@ theme:
     code: IBM Plex Mono
   icon:
     logo: material/library
-  logo: images/ibm-blue-background.png
+  logo: images/BeeAI-Logo-White.png
   favicon: images/favicon.ico
   features:
     - navigation.tabs
@@ -45,8 +45,8 @@ theme:
     - content.code.copy
   palette:
     scheme: default
-    primary: blue
-    accent: blue
+    primary: black
+    accent: white
 
 # Plugins
 plugins:
