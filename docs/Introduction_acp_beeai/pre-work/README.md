@@ -35,36 +35,37 @@ logo: images/ibm-blue-background.png
 
 2. Initialize a new project by running the following command in the terminal. This creates a new project folder named my_acp_project and sets it up with uv.
 
-   ```shell
-   uv init --python '>=3.11' my_acp_project 
-   ```
+    ```shell
+    uv init --python '>=3.11' my_acp_project 
+    ```
 
 3. Navigate into your new project directory
 
-   ```shell
-   cd my_acp_project
-   ```
+    ```shell
+    cd my_acp_project
+    ```
 
 4. Add the ACP SDK as a dependency
 
-   ```shell
-   uv add acp-sdk
-   ```
+    ```shell
+    uv add acp-sdk
+    ```
 
 ## BeeAI Platform
 
 ### Prerequisites to get started with BeeAI Platform
 
 - [Homebrew](https://brew.sh/) (for macOS or Linux)
-   - If you don’t already have Homebrew installed, run the following command in your terminal and follow the instructions to update your shell environment:
 
-     ```shell
-     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-     ```
+    - If you don’t already have Homebrew installed, run the following command in your terminal and follow the instructions to update your shell environment:
+
+      ```shell
+      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+      ```
 
 - [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install) (for Windows users)
 
-   - [Windows WSL2 setup instructions](https://docs.beeai.dev/introduction/installation#windows-wsl2-setup-instructions)
+    - [Windows WSL2 setup instructions](https://docs.beeai.dev/introduction/installation#windows-wsl2-setup-instructions)
 
 - LLM API Key or Ollama?
 
@@ -74,11 +75,11 @@ logo: images/ibm-blue-background.png
 
 1. Install BeeAI using Homebrew:
 
-   ```shell
-   brew install i-am-bee/beeai/beeai
-   ```
+    ```shell
+    brew install i-am-bee/beeai/beeai
+    ```
 
-1. Start the BeeAI background service:
+2. Start the BeeAI background service:
 
    ```shell
    brew services start beeai
