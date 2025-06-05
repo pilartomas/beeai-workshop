@@ -89,14 +89,14 @@ We are using 2 frameworks to illustrate how easy it is to make any agent ACP-com
       * Find **"agent_name"** and change the value from "string" to **"ticket_triage_agent"**
       * Find **"content"** and change the value from "string" to:
 
-       ```text
-       "Hi there, this is Jane Doe. Ever since yesterday your ProPlan won't let me export reports. This is blocking my quarter-end close—please fix ASAP or refund the month.AccountNumber: 872-55"
-       ```
+        ```text
+        "Hi there, this is Jane Doe. Ever since yesterday your ProPlan won't let me export reports. This is blocking my quarter-end close—please fix ASAP or refund the month.AccountNumber: 872-55"
+        ```
 
-     * Remove the **"content_url"** line
-     * Find **"mode"** and change the value from "sync" to **"stream"**
+      * Remove the **"content_url"** line
+      * Find **"mode"** and change the value from "sync" to **"stream"**
 
-   * Click `Execute`
+    * Click `Execute`
 
    > --- Expected results ---
    >

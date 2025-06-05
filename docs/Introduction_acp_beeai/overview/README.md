@@ -15,15 +15,18 @@ During this workshop, you'll explore a ticket triage scenario featuring two spec
 This lab consists of 3 progressive parts:
 
 ### Part 1: Running Individual ACP Agents
+
 * Execute an ACP agent built with the BeeAI framework and ACP SDK
 * Execute an ACP-compatible agent built with the Pydantic AI framework and ACP SDK  
 * Invoke both agents using curl commands or the OpenAPI UI
 
 ### Part 2: Platform Integration
+
 * Launch the BeeAI Platform and observe automatic agent registration
 * Run your agents through the BeeAI GUI
 
 ### Part 3: Workflow Orchestration
+
 * Create a new workflow agent that sequentially orchestrates the two existing agents
 * Execute the workflow in both CLI and BeeAI platform environments
 

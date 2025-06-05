@@ -14,13 +14,11 @@ Explore BeeAI through hands-on workshops that demonstrate how BeeAI's integrated
 |:-------------------------------------------------|:-----------------------------------------------------|
 | [Introduction to ACP and BeeAI](Introduction_acp_beeai/pre-work/README.md)            | Walk through a practical ticket triage scenario to get started with the BeeAI ecosystem.                            |
 
-
-
 ## The BeeAI Ecosystem
 
 BeeAI is a comprehensive platform for building, deploying, and managing multi-agent AI systems. Whether you're a developer creating sophisticated agent workflows or a business user leveraging shared agents, BeeAI provides the tools and infrastructure to make AI agents more accessible, interoperable, and production-ready.
 
-BeeAI consists of three integrated components that work together to streamline the entire agent lifecycle:
+BeeAI consists of three integrated components that work together to streamline the entire agent life cycle:
 
 ### 1. **Build** with the BeeAI Framework
 
