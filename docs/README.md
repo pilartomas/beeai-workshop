@@ -23,22 +23,27 @@ BeeAI is a comprehensive platform for building, deploying, and managing multi-ag
 BeeAI consists of three integrated components that work together to streamline the entire agent lifecycle:
 
 ### 1. **Build** with the BeeAI Framework
+
 Build multi-agent systems leveraging agents from any framework that meet your requirements.
 
-**For Developers:**
+#### For Developers:
+
 * Build multi-agent systems that meet custom requirements while leveraging production-grade, out-of-the-box components
 * Run and test custom agents in a consistent development environment
 * Leverage templates and examples to accelerate development
 
 ### 2. **Collaborate** with Agent Communication Protocol (ACP)
+
 Enable seamless interoperability between agents built in different frameworks through standardized communication.
 
 ACP is an HTTP REST-based protocol built on client-server architecture that standardizes how agents communicate (their inputs and outputs). This enables agents built in any framework to collaborate with one another, forming the foundation for agent collaboration in the BeeAI Platform.
 
 ### 3. **Configure, Deploy, Run, Share, and Govern** in the BeeAI Platform
+
 Make the deployment process frictionless from development to production with comprehensive governance capabilities.
 
-**For Developers:**
+#### For Developers:
+
 * Configure agents to leverage ready-made UIs provided by the platform
 * Specify recommended models for optimal agent performance
 * Easily set up environment and authentication configuration for end users
@@ -48,6 +53,7 @@ Make the deployment process frictionless from development to production with com
 * Monitor user feedback to continuously improve agents
 * Maintain visibility into agent usage and behavior through comprehensive telemetry, access controls, and audit trails
 
-**For Business Users:**
+#### For Business Users:
+
 * Experience consistent UI across different agents shared with you
 * Use agents successfully without understanding their internal workings

@@ -17,19 +17,19 @@ We are using 2 frameworks to illustrate how easy it is to make any agent ACP-com
 
 1. Prerequisites
 
-   The described commands assume you are running from the beeai-workshop directory
-   of your cloned repo. This was already done if you did the pre-work.
+    The described commands assume you are running from the beeai-workshop directory
+    of your cloned repo. This was already done if you did the pre-work.
 
-   ```shell
-   git clone https://github.com/IBM/beeai-workshop.git
-   cd beeai-workshop
-   ```
+    ```shell
+    git clone https://github.com/IBM/beeai-workshop.git
+    cd beeai-workshop
+    ```
 
 2. Install the dependencies
 
-   ```shell
-   uv sync
-   ```
+    ```shell
+    uv sync
+    ```
 
 3. Set up your .env file with your OpenAI API Key
 
@@ -51,42 +51,43 @@ We are using 2 frameworks to illustrate how easy it is to make any agent ACP-com
 
 4. Run the ticket triage agent (defaults to run on port 8000)
 
-   ```shell
-   uv run src/ticket_triage_agent.py
-   ```
+    ```shell
+    uv run src/ticket_triage_agent.py
+    ```
 
 5. Run the ticket response agent using port 8001
 
-   ```shell
-   PORT=8001 uv run src/ticket_response_agent.py
-   ```
+    ```shell
+    PORT=8001 uv run src/ticket_response_agent.py
+    ```
 
 6. Use your browser to try the FastAPI interface
 
-   * Browse to [http://localhost:8000/docs](http://localhost:8000/docs)
-   * Pull down `GET` **/agents** *List Agents*
-   * Hit the `Try it out` button and then click `Execute`
+    * Browse to [http://localhost:8000/docs](http://localhost:8000/docs)
+    * Pull down `GET` **/agents** *List Agents*
+    * Hit the `Try it out` button and then click `Execute`
 
-   > --- Expected results ---
+    > --- Expected results ---
+    >
+    > Under `Responses`:
    >
-   > Under `Responses`:
-   > * Under `Response body`, the result shows just one agent named `ticket_triage_agent` (the second agent is not running on port 8000).
-   > * Under `Curl`, you get the curl command that you can run in a terminal (instead of using the UI)
-   > * Try running the curl command (in a new terminal window)
-   >
-   >   ```shell
-   >   curl -X 'GET' 'http://localhost:8000/agents' -H 'accept: application/json'
-   >   ```
+    > * Under `Response body`, the result shows just one agent named `ticket_triage_agent` (the second agent is not running on port 8000).
+    > * Under `Curl`, you get the curl command that you can run in a terminal (instead of using the UI)
+    > * Try running the curl command (in a new terminal window)
+    >
+    >   ```shell
+    >   curl -X 'GET' 'http://localhost:8000/agents' -H 'accept: application/json'
+    >   ```
 
 7. Invoke the triage agent
 
-   * Go back to the main FastAPI page
-   * Pull down `POST /runs Create Run`
-   * Pull down `POST` **/runs** *Create Run*
-   * Hit the `Try it out` button
-   * In the `Request body`:
-     * Find **"agent_name"** and change the value from "string" to **"ticket_triage_agent"**
-     * Find **"content"** and change the value from "string" to:
+    * Go back to the main FastAPI page
+    * Pull down `POST` **/runs** *Create Run*
+    * Hit the `Try it out` button
+    * In the `Request body`:
+
+      * Find **"agent_name"** and change the value from "string" to **"ticket_triage_agent"**
+      * Find **"content"** and change the value from "string" to:
 
        ```text
        "Hi there, this is Jane Doe. Ever since yesterday your ProPlan won't let me export reports. This is blocking my quarter-end close—please fix ASAP or refund the month.AccountNumber: 872-55"
@@ -94,6 +95,7 @@ We are using 2 frameworks to illustrate how easy it is to make any agent ACP-com
 
      * Remove the **"content_url"** line
      * Find **"mode"** and change the value from "sync" to **"stream"**
+
    * Click `Execute`
 
    > --- Expected results ---
