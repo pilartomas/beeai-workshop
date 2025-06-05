@@ -2,6 +2,7 @@ Augumented
 acp
 ACP
 beeai
+BeeAI's
 BJ
 cd
 CLI
@@ -17,6 +18,7 @@ datetime
 embeddings
 Embeddings
 env
+frictionless
 groq
 Hargrave
 Homebrew
@@ -42,6 +44,7 @@ png
 pre
 Pre
 pretrained
+Pydantic
 PydanticAI
 repo
 runtime

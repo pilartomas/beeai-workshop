@@ -10,15 +10,22 @@ logo: images/ibm-blue-background.png
 
 ### Prerequisites to get started with ACP
 
-- Python '>=3.11
+#### Python '>=3.11
+
   - Go to [python.org/downloads](https://www.python.org/downloads/)
   - Download the version for your operating system (Windows, macOS, or Linux)
-    > Important: During installation, make sure to check the box that says `Add Python to PATH` or manually if you skip this step
+
+     > Important: During installation, make sure to check the box that says `Add Python to PATH` or manually if you skip this step
+
   - To verify installation type `python --version`
-- [Visual Studio Code](https://ibm.github.io/opensource-ai-workshop/pre-work/#installing-visual-studio-code) (Recommended)
+
+#### [Visual Studio Code](https://ibm.github.io/opensource-ai-workshop/pre-work/#installing-visual-studio-code) (Recommended)
+
   - You can use any IDE, but this workshop assumes you're using VS Code
   - If this is your first time using VS Code, make sure to install the Python extension from the extension marketplace
-- uv
+
+#### uv
+
   - uv is recommended for this workshop, but you can use uv, pip, or another package manager if you're more comfortable with them.
   - If you’re unfamiliar with uv, check out [this uv primer](https://agentcommunicationprotocol.dev/introduction/uv-primer) for installation instructions
 
@@ -26,19 +33,19 @@ logo: images/ibm-blue-background.png
 
 1. Open VS Code and navigate to the directory where you want to create your new ACP project
 
-1. Initialize a new project by running the following command in the terminal. This creates a new project folder named my_acp_project and sets it up with uv.
+2. Initialize a new project by running the following command in the terminal. This creates a new project folder named my_acp_project and sets it up with uv.
 
    ```shell
    uv init --python '>=3.11' my_acp_project 
    ```
 
-1. Navigate into your new project directory
+3. Navigate into your new project directory
 
    ```shell
    cd my_acp_project
    ```
 
-1. Add the ACP SDK as a dependency
+4. Add the ACP SDK as a dependency
 
    ```shell
    uv add acp-sdk
@@ -49,14 +56,16 @@ logo: images/ibm-blue-background.png
 ### Prerequisites to get started with BeeAI Platform
 
 - [Homebrew](https://brew.sh/) (for macOS or Linux)
-  - If you don’t already have Homebrew installed, run the following command in your terminal and follow the instructions to update your shell environment:
+   - If you don’t already have Homebrew installed, run the following command in your terminal and follow the instructions to update your shell environment:
 
-    ```shell
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    ```
+     ```shell
+     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+     ```
 
 - [WSL2](https://learn.microsoft.com/en-us/windows/wsl/install) (for Windows users)
-  - [Windows WSL2 setup instructions](https://docs.beeai.dev/introduction/installation#windows-wsl2-setup-instructions)
+
+   - [Windows WSL2 setup instructions](https://docs.beeai.dev/introduction/installation#windows-wsl2-setup-instructions)
+
 - LLM API Key or Ollama?
 
 ### BeeAI Platform setup prior to starting the workshop code
