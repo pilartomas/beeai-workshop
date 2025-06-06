@@ -10,27 +10,7 @@ logo: images/ibm-blue-background.png
 
 ### Complete Uninstall
 
-To completely remove BeeAI from your system:
-
-1. Stop the BeeAI platform service:
-
-    ```shell
-    beeai platform stop
-    ```
-
-2. Uninstall BeeAI using Homebrew:
-
-    ```shell
-    brew uninstall beeai
-    ```
-
-### Uninstall Dependencies
-
-If you also want to remove related dependencies that were installed:
-
-```shell
-brew uninstall arize-phoenix
-```
+To completely remove BeeAI from your system, follow the "Uninstall" section in the [BeeAI documentation installation guide](https://docs.beeai.dev/introduction/installation) depending on how you installed BeeAI.
 
 ## Getting Help
 
@@ -61,7 +41,7 @@ You can access comprehensive CLI documentation directly from your terminal:
     ```shell
     lsof -i :8000
     ```
-2. Kill the process if needed:
+2. Kill the process if needed, substituting the number in the "PID" column:
     ```shell
     kill -9 <PID>
     ```
@@ -77,7 +57,7 @@ You can access comprehensive CLI documentation directly from your terminal:
 **Solutions:**
 1. Try stopping and restarting:
     ```shell
-    beeai platform stop
+    beeai platform delete
     beeai platform start
     ```
 
@@ -98,15 +78,11 @@ You can access comprehensive CLI documentation directly from your terminal:
 **Problem:** `uv sync` fails or Python dependency errors
 
 **Solutions:**
-1. Ensure you're using Python >=3.11:
-    ```shell
-    python --version
-    ```
-2. Try clearing UV cache:
+1. Try clearing `uv` cache:
     ```shell
     uv cache clean
     ```
-3. Reinstall dependencies:
+2. Reinstall dependencies:
     ```shell
     uv sync --reinstall
     ```
@@ -116,10 +92,14 @@ You can access comprehensive CLI documentation directly from your terminal:
 **Problem:** BeeAI UI doesn't load in browser
 
 **Solutions:**
-1. Try a different browser or incognito/private mode
-2. Clear browser cache and cookies
-3. Ensure the BeeAI platform is running:
+1. Upgrade BeeAI to the latest version
+2. Run this command, which will check the platform and env:
     ```shell
+    beeai ui
+    ```
+3. Recreate your BeeAI platform instance and try again:
+    ```shell
+    beeai platform delete
     beeai platform start
     beeai ui
     ```
@@ -144,21 +124,7 @@ You can access comprehensive CLI documentation directly from your terminal:
 
 ## Reset and Clean Installation
 
-If you're experiencing persistent issues, try a clean reinstall:
-
-1. **Complete cleanup:**
-    ```shell
-    beeai platform stop
-    brew uninstall beeai
-    brew uninstall arize-phoenix
-    ```
-
-2. **Fresh installation:**
-    ```shell
-    brew install i-am-bee/beeai/beeai
-    beeai platform start
-    beeai env setup
-    ```
+If you're experiencing persistent issues, try a clean reinstall -- follow the "Uninstall" section and then the "Install" section in the [BeeAI installation documentation](https://docs.beeai.dev/introduction/installation).
 
 ## Getting Additional Support
 
