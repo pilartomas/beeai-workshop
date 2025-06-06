@@ -45,7 +45,7 @@ uv run src/ticket_triage_agent.py
 
 Use your browser to invoke the `ticket_triage_agent` using the FastAPI interface:
 
-1. In your preferred browser navigate to [http://localhost:8000/docs](http://localhost:8000/docs) {target="_blank"}
+1. In your preferred browser navigate to [http://localhost:8000/docs](http://localhost:8000/docs)
 2. Pull down **GET** `/agents` *List Agents*
 3. Hit the `Try it out` button and then click `Execute`
 
