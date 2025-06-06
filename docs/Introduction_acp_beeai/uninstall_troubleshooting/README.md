@@ -10,7 +10,7 @@ logo: images/ibm-blue-background.png
 
 ### Complete Uninstall
 
-To completely remove BeeAI from your system, follow the "Uninstall" section in the [BeeAI documentation installation guide](https://docs.beeai.dev/introduction/installation) depending on how you installed BeeAI.
+To completely remove BeeAI from your system, follow the "Uninstall" section in the [BeeAI documentation installation guide](https://docs.beeai.dev/introduction/installation#uninstall) depending on how you installed BeeAI.
 
 ## Getting Help
 
