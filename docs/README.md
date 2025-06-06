@@ -57,9 +57,9 @@ Make the deployment process frictionless from development to production with com
 * Use agents successfully without understanding their internal workings
 
 ## Finished with the Workshops and Ready to Take It to the Next Level?
-* Check out our documentation for the beeai [framework](https://github.com/i-am-bee/beeai-framework) , [ACP](https://agentcommunicationprotocol.dev/) protocol, and [BeeAI](https://docs.beeai.dev/introduction/welcome) Platfrom 
-* Dive into the example repos for the beeai [framework](https://github.com/i-am-bee/beeai-framework) , [ACP](https://github.com/i-am-bee/acp) protocol, and [BeeAI Platfrom](https://github.com/i-am-bee/beeai-platform)
-* Stuck? Join our [Discord](https://discord.gg/JwaxmuSj3J) server for quick trouble shooting
+* Check out our documentation for the [BeeAI Framework](https://github.com/i-am-bee/beeai-framework), [ACP](https://agentcommunicationprotocol.dev/) protocol, and [BeeAI Platform](https://docs.beeai.dev/introduction/welcome)
+* Dive into the example repos for the [BeeAI Framework](https://github.com/i-am-bee/beeai-framework), [ACP](https://github.com/i-am-bee/acp) protocol, and [BeeAI Platform](https://github.com/i-am-bee/beeai-platform)
+* Stuck? Join our [Discord](https://discord.com/invite/NradeA6ZNF) server for quick troubleshooting
 
 ## Ready to Contribute?
 * Get involved in the conversation on our Github Discussions
