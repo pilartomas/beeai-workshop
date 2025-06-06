@@ -19,11 +19,13 @@ To completely remove BeeAI from your system, follow the "Uninstall" section in t
 You can access comprehensive CLI documentation directly from your terminal:
 
 - View all available commands:
+
     ```shell
     beeai --help
     ```
 
 - Get help for specific commands:
+
     ```shell
     beeai platform --help
     beeai env --help
@@ -37,15 +39,21 @@ You can access comprehensive CLI documentation directly from your terminal:
 **Problem:** "Port already in use" error when starting agents
 
 **Solution:**
+
 1. Check what's running on the port:
+
     ```shell
     lsof -i :8000
     ```
+
 2. Kill the process if needed, substituting the number in the "PID" column:
+
     ```shell
     kill -9 <PID>
     ```
+
 3. Or use a different port:
+
     ```shell
     uv run src/ticket_workflow_agent.py --port 8001
     ```
@@ -55,7 +63,9 @@ You can access comprehensive CLI documentation directly from your terminal:
 **Problem:** `beeai platform start` fails
 
 **Solutions:**
+
 1. Try stopping and restarting:
+
     ```shell
     beeai platform delete
     beeai platform start
@@ -66,10 +76,13 @@ You can access comprehensive CLI documentation directly from your terminal:
 **Problem:** Authentication errors or "Invalid API key"
 
 **Solutions:**
+
 1. Reconfigure your LLM provider:
+
     ```shell
     beeai env setup
     ```
+
 2. Verify your API key is correctly set in the environment
 3. Check that your API key has sufficient credits/quota
 
@@ -78,11 +91,15 @@ You can access comprehensive CLI documentation directly from your terminal:
 **Problem:** `uv sync` fails or Python dependency errors
 
 **Solutions:**
+
 1. Try clearing `uv` cache:
+
     ```shell
     uv cache clean
     ```
+
 2. Reinstall dependencies:
+
     ```shell
     uv sync --reinstall
     ```
@@ -92,12 +109,16 @@ You can access comprehensive CLI documentation directly from your terminal:
 **Problem:** BeeAI UI doesn't load in browser
 
 **Solutions:**
+
 1. Upgrade BeeAI to the latest version
 2. Run this command, which will check the platform and env:
+
     ```shell
     beeai ui
     ```
+
 3. Recreate your BeeAI platform instance and try again:
+
     ```shell
     beeai platform delete
     beeai platform start
@@ -109,15 +130,21 @@ You can access comprehensive CLI documentation directly from your terminal:
 **Problem:** Can't find workshop files or folders
 
 **Solutions:**
+
 1. Ensure you cloned the correct repository:
+
     ```shell
     git clone https://github.com/IBM/beeai-workshop.git
     ```
+
 2. Navigate to the correct directory:
+
     ```shell
     cd beeai-workshop/intro_acp_beeai
     ```
+
 3. Verify the files exist:
+
     ```shell
     ls -la src/
     ```

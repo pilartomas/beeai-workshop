@@ -10,9 +10,9 @@ logo: images/BeeAI-Logo-White.png
 
 Explore BeeAI through hands-on workshops that demonstrate how BeeAI's integrated components work together to create powerful, collaborative agent systems.
 
-| Workshop | Description |
-|:---------|:------------|
-| [Introduction to ACP and BeeAI](Introduction_acp_beeai/pre-work/README.md) | Walk through a practical ticket triage scenario to get started with the BeeAI ecosystem. |                           |
+| Workshop                                                                   | Description                                                                              |
+|:---------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------|
+| [Introduction to ACP and BeeAI](Introduction_acp_beeai/pre-work/README.md) | Walk through a practical ticket triage scenario to get started with the BeeAI ecosystem. |
 
 ## The BeeAI Ecosystem
 
@@ -57,10 +57,12 @@ Make the deployment process frictionless from development to production with com
 * Use agents successfully without understanding their internal workings
 
 ## Finished with the Workshops and Ready to Take It to the Next Level?
+
 * Check out our documentation for the [BeeAI Framework](https://github.com/i-am-bee/beeai-framework), [ACP](https://agentcommunicationprotocol.dev/) protocol, and [BeeAI Platform](https://docs.beeai.dev/introduction/welcome)
 * Dive into the example repos for the [BeeAI Framework](https://github.com/i-am-bee/beeai-framework), [ACP](https://github.com/i-am-bee/acp) protocol, and [BeeAI Platform](https://github.com/i-am-bee/beeai-platform)
 * Stuck? Join our [Discord](https://discord.com/invite/NradeA6ZNF) server for quick troubleshooting
 
 ## Ready to Contribute?
-* Get involved in the conversation on our Github Discussions
+
+* Get involved in the conversation on our GitHub Discussions
 * Pick up a help wanted issue!

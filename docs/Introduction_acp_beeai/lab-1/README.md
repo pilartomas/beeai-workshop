@@ -96,7 +96,6 @@ curl -N -X POST http://localhost:8001/runs \
 
 In the response body, you should see an appropriate human-like ticket agent response.
 
-
 ### 7. Clean Up
 
 If you have not already, remember to stop the ACP agent servers using `Ctrl + C` or exiting the terminal where they are running.

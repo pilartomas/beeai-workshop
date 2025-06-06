@@ -69,13 +69,17 @@ curl -N -X POST http://localhost:8000/runs \
 2. Pull down **POST** `/runs` *Create Run*
 3. Hit the `Try it out` button
 4. In the `Request body`:
+
    - Find **"agent_name"** and change the value from "string" to **"TicketWorkflow"**
    - Find **"content"** and change the value from "string" to:
+
      ```text
      Hi there, this is Jane Doe. Ever since yesterday your ProPlan won't let me export reports. This is blocking my quarter-end close—please fix ASAP or refund the month.AccountNumber: 872-55
      ```
+
    - Remove the **"content_url"** line
    - Find **"mode"** and change the value from "sync" to **"stream"**
+
 5. Click `Execute`
 6. Scroll down to the server response
 
