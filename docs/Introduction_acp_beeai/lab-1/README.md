@@ -4,7 +4,7 @@ description: Create and invoke ACP agents
 logo: images/ibm-blue-background.png
 ---
 
-# Create and invoke ACP agents
+# Create and Invoke ACP Agents
 
 In this lab, you will invoke 2 agents using the ACP SDK (the Python code is provided). One agent is written using the BeeAI Framework and the other agent is written using PydanticAI. We are using 2 different frameworks to illustrate how easy it is to make any agent ACP-compatible.
 
