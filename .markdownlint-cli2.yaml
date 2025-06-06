@@ -9,6 +9,7 @@ config:
   commands-show-output: false
   ol-prefix: false
   heading-start-left: false
+  no-bare-urls: false
   no-duplicate-heading: false
   no-inline-html: false
   no-alt-text: false
