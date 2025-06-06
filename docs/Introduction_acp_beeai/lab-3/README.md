@@ -66,10 +66,10 @@ You should see both the triage output (structured data about the ticket) and the
 ### 6. Clean Up
 
 1. Stop the ACP agent servers using `Ctrl + C` or exiting the terminal where it is running.
-2. Stop the platform by running this command in your terminal:
+2. Clean up the platform by running this command in your terminal:
 
     ```shell
-    beeai platform stop
+    beeai platform delete
     ```
 
 ## Congratulations! You've completed the Introduction to ACP + BeeAI Workshop.
