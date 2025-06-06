@@ -1,3 +1,5 @@
+import textwrap
+
 #Framework imports
 from beeai_framework.adapters.openai import OpenAIChatModel
 from beeai_framework.backend import UserMessage, SystemMessage
@@ -58,13 +60,12 @@ async def ticket_triage_agent(input: list[Message]) -> AsyncGenerator[RunYield, 
         user_prompt = flatten_messages(input[-1:])
         model_name = os.getenv("MODEL_NAME", "gpt-4.1-mini-2025-04-14")
         llm = OpenAIChatModel(model_name)
-        system_msg = SystemMessage(
-             """
+        system_msg = SystemMessage(textwrap.dedent("""
             You are “Support-Sensei,” an AI assistant that must:
             1. Choose the single best ticket category.
             2. Extract the required fields.
             """
-        )
+        ))
         response = await llm.create_structure(
             schema=TicketClassifierOutput,
             messages=[system_msg, UserMessage(user_prompt)],
@@ -73,7 +74,7 @@ async def ticket_triage_agent(input: list[Message]) -> AsyncGenerator[RunYield, 
 
 
 def run():
-    server.run(port=int(os.getenv("PORT", 8000)))
+    server.run(port=int(os.getenv("PORT", 8000)), self_registration=False)
 
 
 if __name__ == "__main__":

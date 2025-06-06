@@ -1,4 +1,5 @@
 import sys
+import textwrap
 import os
 #Pydantic Framework
 from pydantic_ai import Agent
@@ -31,7 +32,7 @@ async def ticket_response_agent(input: list[Message]) -> AsyncGenerator[RunYield
     model_name = os.getenv("MODEL_NAME", "gpt-4.1-mini-2025-04-14")
     model = OpenAIModel(model_name)
     TicketResponseAgent = Agent( model=model,
-                            system_prompt=("""
+                            system_prompt=(textwrap.dedent("""
                                            You are a helpful customer support agent that creates clear, helpful, human-sounding replies to a customer.
                                            Tone & Style Matrix:
                                             Category   | Primary Tone        | Secondary Goals
@@ -41,14 +42,14 @@ async def ticket_response_agent(input: list[Message]) -> AsyncGenerator[RunYield
                                             Account    | Professional, supportive | Clarify account status or changes, confirm security measures
                                             Feedback   | Appreciative, receptive | Thank the customer, highlight how feedback is used
                                             Other      | Warm, helpful        | Clarify intent, offer assistance
-                                           """))
+                                           """)))
     response = await TicketResponseAgent.run(user_prompt)
     
     yield package_response(response.output)
 
 #Run these agents on different ports
 def run():
-    server.run(port=int(os.getenv("PORT", 8001)))
+    server.run(port=int(os.getenv("PORT", 8001)), self_registration=False)
 
 
 if __name__ == "__main__":
