@@ -55,7 +55,7 @@ Already installed BeeAI in the past? Be sure to update it to the latest version 
 
     **Alternative:** You can also open VS Code first, then use "File > Open Folder" to navigate to and select the `beeai-workshop/intro_acp_beeai` folder.
 
-3. Create a .env file based on the env.template file at the intro_acp_beeai directory level. Uncomment out either the OpenAI API Key or the Groq API key and add your own api.
+3. Create a .env file based on the env.template file at the intro_acp_beeai directory level. Uncomment either the OpenAI or Groq provider config and add your own api key.
 
     ```shell
     cp env.template .env
