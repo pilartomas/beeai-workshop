@@ -62,5 +62,5 @@ Make the deployment process frictionless from development to production with com
 * Stuck? Join our [Discord](https://discord.com/invite/NradeA6ZNF) server for quick troubleshooting
 
 ## Ready to Contribute?
-* Get involved in the conversation on our Github Discussions
+* Get involved in the conversation on our GitHub Discussions
 * Pick up a help wanted issue!
