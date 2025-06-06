@@ -4,7 +4,7 @@ description: Create a multi-agent ACP workflow
 logo: images/ibm-blue-background.png
 ---
 
-# Create a ticket agent with triage and response
+# Create a Multi-Agent ACP Workflow
 
 In this lab, we'll create a ticket agent that uses the triage agent and the response agent in a single workflow.
 

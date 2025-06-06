@@ -10,8 +10,9 @@ logo: images/BeeAI-Logo-White.png
 
 Explore BeeAI through hands-on workshops that demonstrate how BeeAI's integrated components work together to create powerful, collaborative agent systems.
 
-|:-------------------------------------------------|:-----------------------------------------------------|
-| [Introduction to ACP and BeeAI](Introduction_acp_beeai/pre-work/README.md)            | Walk through a practical ticket triage scenario to get started with the BeeAI ecosystem.                            |
+| Workshop | Description |
+|:---------|:------------|
+| [Introduction to ACP and BeeAI](Introduction_acp_beeai/pre-work/README.md) | Walk through a practical ticket triage scenario to get started with the BeeAI ecosystem. |                           |
 
 ## The BeeAI Ecosystem
 
