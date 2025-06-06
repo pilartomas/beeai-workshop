@@ -24,12 +24,6 @@ logo: images/ibm-blue-background.png
 
 - [OpenAI](https://platform.openai.com/api-keys) API key (paid) or [Groq](https://console.groq.com/keys) API key (free)
 
-## BeeAI Platform
-
-Install BeeAI platform using the [installation instructions in the documentation](https://docs.beeai.dev/introduction/installation). Don't forget to run `beeai platform start` to start the platform prior to running the examples.
-
-Already installed BeeAI in the past? Be sure to update it to the latest version according to the instructions in the documentation.
-
 ## Workshop Specific Requirements
 
 1. Get the workshop code:

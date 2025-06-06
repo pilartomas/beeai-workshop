@@ -35,7 +35,7 @@ uv run src/ticket_workflow_agent.py
 
 ### 4. Verify All Agents Are Running
 
-In your browser navigate to [http://localhost:8000/docs](http://localhost:8000/docs {target="_blank"}):
+In your browser navigate to [http://localhost:8000/docs](http://localhost:8000/docs) {target="_blank"}
 
 1. Pull down **GET** `/agents` *List Agents*
 2. Hit the `Try it out` button and then click `Execute`
@@ -65,7 +65,7 @@ curl -N -X POST http://localhost:8000/runs \
 
 #### Option B: Use your browser to use the FastAPI interface
 
-1. In your browser navigate to [http://localhost:8000/docs](http://localhost:8000/docs {target="_blank"})
+1. In your browser navigate to [http://localhost:8000/docs](http://localhost:8000/docs) {target="_blank"}
 2. Pull down **POST** `/runs` *Create Run*
 3. Hit the `Try it out` button
 4. In the `Request body`:
